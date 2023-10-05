@@ -6,7 +6,7 @@ echo phpversion();
 ?>
 <script>
     //create
-    let data = {
+    let data1 = {
         "answer": "answer",
         "timeTakenToAnswer": 123,
         "tutorId": "TUT1234567",
@@ -15,12 +15,12 @@ echo phpversion();
     fetch("answer/", {
         method: "POST",
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(data)
+        body: JSON.stringify(data1)
     }).then(async res => {
         console.log("Request complete! response:", await res.json());
     });
     //update
-    let data = {
+    let data2 = {
         "id" : "ANS6426667",
         "answer": "ANS6426667",
         "timeTakenToAnswer": 123,
@@ -30,7 +30,7 @@ echo phpversion();
     fetch("answer/", {
         method: "PUT",
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(data)
+        body: JSON.stringify(data2)
     }).then(async res => {
         console.log("Request complete! response:", await res.json());
     });
