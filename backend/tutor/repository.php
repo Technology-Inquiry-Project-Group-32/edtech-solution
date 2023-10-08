@@ -50,3 +50,11 @@ function get($id = null)
     $result = executeSelectQuery($selectQuery,$schema);
     return $result;
 }
+function getByUsername($username="", $password="")
+{
+
+    $selectQuery = "select * from Tutor where Username = '$username' and Password = '$password'";
+    $schema = array("TutorID", "Firstname", "Lastname", "Contact", "Username","Password");
+    $result = executeSelectQuery($selectQuery,$schema);
+    return $result;
+}
