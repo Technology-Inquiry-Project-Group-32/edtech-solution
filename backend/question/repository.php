@@ -49,3 +49,14 @@ function get($id = null)
     $result = executeSelectQuery($selectQuery,$schema);
     return $result;
 }
+function getBySession($id = null)
+{
+    if($id == null){
+        $selectQuery = "select * from Question";
+    }else{
+        $selectQuery = "select * from Question where SessionID = '$id'";
+    }
+    $schema = array("QuestionID", "Question", "SubjectAreaID", "SessionID", "StudentID");
+    $result = executeSelectQuery($selectQuery,$schema);
+    return $result;
+}

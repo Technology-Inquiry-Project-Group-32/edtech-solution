@@ -49,3 +49,15 @@ function get($id = null)
     $result = executeSelectQuery($selectQuery,$schema);
     return $result;
 }
+
+function getByTutor($id = null)
+{
+    if($id == null){
+        $selectQuery = "select * from Answer";
+    }else{
+        $selectQuery = "select * from Answer where TutorID = '$id'";
+    }
+    $schema = array("AnswerID", "Answer", "TimeTakenToAnswer", "TutorID", "QuestionID");
+    $result = executeSelectQuery($selectQuery,$schema);
+    return $result;
+}
