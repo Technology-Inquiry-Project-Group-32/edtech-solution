@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . "/../common/db.php";
 
-function login($username, $password)
+function getUserByUserNamePassword($username, $password)
 {
     $tutorSchema = array("TutorID", "Firstname", "Lastname", "Contact", "Username","Password");
     $selectTutorQuery = "select * from Tutor where Username = '$username' and Password = '$password'";

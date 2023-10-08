@@ -20,8 +20,8 @@ function executeSelectQuery($query,$attributes)
             }
             $results[] = $result;
         }
+        mysqli_free_result($rows);
     }
-    mysqli_free_result($rows);
     mysqli_close($dbConnect);
     return $results;
 }

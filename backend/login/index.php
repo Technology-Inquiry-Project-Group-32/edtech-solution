@@ -29,7 +29,7 @@ function login(){
     if($loginRequest != null){
         $username = trim($loginRequest["username"]);
         $password = trim($loginRequest["password"]);
-        $loginModel = login($username,$password);
+        $loginModel = getUserByUserNamePassword($username,$password);
         return $loginModel;
     }
     return null;
