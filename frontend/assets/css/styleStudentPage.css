@@ -1,0 +1,75 @@
+body{
+    background: #EEE;
+    font-family: sans-serif;
+    font-weight: 500;
+
+}
+
+
+body, h1, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header h1{
+    color: #C71F3A;
+    margin-right: 20px;
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20em;
+}
+
+nav ul li {
+    margin-left: 20px;
+
+    display: inline-block;
+    margin-left: 70px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #121532;
+    font-weight: bold;
+}
+
+/* Add hover effect to navigation links */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Check Attendance */
+#checkattendance{
+    margin-left: 1%;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+    clear: both;
+    color: white;
+    
+}
+
+#session{
+    margin-left: 1%;
+}
+
+button{
+    background-color: #1C2D5A;
+    color: white;
+}
+
+.button{
+    background-color: #1C2D5A;
+    color: white;
+}
