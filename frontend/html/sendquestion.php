@@ -26,7 +26,7 @@
         $subject = htmlspecialchars($_POST["subject"]);
          
     $sql_table = "Question";
-    $query = "INSERT INTO $sql_table(Question, SubjectAreaID, SessionID, StudentID) VALUES ('$question','$subject','777', '104362047')";
+    $query = "INSERT INTO $sql_table(Quesion, SubjectAreaID, SessionID, StudentID) VALUES ('$question','$subject','Mathematic777', '104362047')";
 
 //Execute the querry
     $result = mysqli_query($conn, $query);
