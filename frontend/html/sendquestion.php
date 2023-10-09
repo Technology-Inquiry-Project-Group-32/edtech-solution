@@ -24,9 +24,9 @@
     else{
         $question = htmlspecialchars($_POST["inputquestion"]);
         $subject = htmlspecialchars($_POST["subject"]);
-         
+        $id = "QT". (time() % 10000000); 
     $sql_table = "Question";
-    $query = "INSERT INTO $sql_table(Quesion, SubjectAreaID, SessionID, StudentID) VALUES ('$question','$subject','Mathematic777', '104362047')";
+    $query = "INSERT INTO $sql_table(QuestionID, Question, SubjectAreaID, SessionID, StudentID) VALUES ('$id','$question','$subject','Mathematic777', '104362047')";
 
 //Execute the querry
     $result = mysqli_query($conn, $query);
@@ -43,6 +43,6 @@
 
 }
 ?>
-<button><a href="studentPage.html">Back To Student Page </a></button>
+<button><a href="studentsession.html">Back To Student Page </a></button>
 </body>
 </html>
