@@ -7,7 +7,7 @@
     <title>Retrieving record to HTML</title>
 </head>
 <body>
-<h1>Creating Web Application - LAB10</h1>
+<h1>Check Attendance Page</h1>
 <?php
     require_once("settings.php");    //connection info
 
@@ -25,7 +25,7 @@
         $studentid = htmlspecialchars($_POST["studentid"]);
     
     $sql_table = "StudentAttendance";
-    $query = "INSERT INTO $sql_table(StudentID, SessionID) VALUES ('$studentid', '777')";
+    $query = "INSERT INTO $sql_table(StudentID, SessionID) VALUES ('$studentid', 'MATH777')";
 
 //Execute the querry
     $result = mysqli_query($conn, $query);
@@ -42,6 +42,6 @@
 
 }
 ?>
-<button><a href="studentPage.html">Back To Student Page </a></button>
+<button><a href="studentsession.html">Back To Student Page </a></button>
 </body>
 </html>
