@@ -4,24 +4,23 @@
 * Purpose: for sessionstorage
 */
 
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get references to the list group items
-    const listItems = document.querySelectorAll(".list-group-item");
 
-    // Store the selected subject
-    let selectedSubject = "";
-
-    // Add a click event listener to each list item
-    listItems.forEach(function (item) {
-      item.addEventListener("click", function () {
-        selectedSubject = item.textContent.trim() + "777"; // Append "777" to the subject
-      });
-    });
-
+    document.addEventListener("DOMContentLoaded", function () {
     // Add a click event listener to the "Enter Session" button
     const enterSessionButton = document.getElementById("enterSessionButton");
     enterSessionButton.addEventListener("click", function () {
-      // Store the selected subject in session storage
-      sessionStorage.setItem("selectedSubject", selectedSubject);
+      // Get the current date and format it as "ddmmyy"
+      const currentDate = new Date();
+      const day = String(currentDate.getDate()).padStart(2, '0');
+      const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Month is 0-based
+      const year = String(currentDate.getFullYear()).slice(-2); // Get the last 2 digits of the year
+
+      // Format the date as "ddmmyy"
+      const formattedDate = day + month + year;
+
+      // Store the formatted date in session storage
+      sessionStorage.setItem("sessionid", formattedDate);
+      sessionStorage.setItem("selectedSubject", formattedDate);
+    
     });
   });
