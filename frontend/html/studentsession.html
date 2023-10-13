@@ -268,7 +268,7 @@
                 </div>
                 <form method="post" action="checkattendance.php">
                     <input type ="text" placeholder="Enter your student ID" id="studentid" name="studentid">
-                    <input type="hidden" name="sessionid" id="sessionid">
+                    <input type="hidden" name="sessionid" id="sessionid" readonly>
                     <input type="submit" value="Click To Check Attendance" class="button" id="checkattendance">
                 </form>
                 <div class="col-md-6">
@@ -287,9 +287,10 @@
                                     </select>
                                 </p>
                                 <p><label for="inputquestion" class="card-title text-primary">Please Input Quesion</label></p>
-                                    <textarea id="inputquestion" name="inputquestion" placeholder="Please type your question here" rows="4" cols="40"></textarea><br>      
+                                    <textarea id="inputquestion" name="inputquestion" placeholder="Please type your question here" rows="4" cols="40"></textarea><br> 
+                                    <input type="hidden" name="sessionid1" id="sessionid1" readonly >     
                                 </fieldset>
-                                <input type="hidden" name="sessionid" id="sessionid">
+                                
                                 <input type="submit" value="Click To Send Question" class="button" id="sendquestion">
                             </form>
                         </div>
