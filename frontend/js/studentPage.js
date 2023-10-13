@@ -23,6 +23,8 @@ function init(){
     
     var selectedSubject = sessionStorage.getItem("selectedSubject");
     document.getElementById("sessionContent").textContent = selectedSubject;
+    document.getElementById("sessionid").value = selectedSubject;
+    document.getElementById("sessionid1").value = selectedSubject;
 }
 
 
