@@ -25,8 +25,9 @@
         $question = htmlspecialchars($_POST["inputquestion"]);
         $subject = htmlspecialchars($_POST["subject"]);
         $id = "QT". (time() % 10000000); 
+        $sessionid = htmlspecialchars($_POST["sessionid"]);
     $sql_table = "Question";
-    $query = "INSERT INTO $sql_table(QuestionID, Question, SubjectAreaID, SessionID, StudentID) VALUES ('$id','$question','$subject','Mathematic777', '104362047')";
+    $query = "INSERT INTO $sql_table(QuestionID, Question, SubjectAreaID, SessionID, StudentID) VALUES ('$id','$question','$subject','$sessionid', '104362047')";
 
 //Execute the querry
     $result = mysqli_query($conn, $query);
