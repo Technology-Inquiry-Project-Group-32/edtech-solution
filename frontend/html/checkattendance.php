@@ -23,7 +23,7 @@
 }
     else{
         $studentid = htmlspecialchars($_POST["studentid"]);
-        $sessionid = htmlspecialchars($_POST["sessionid"]);
+        $sessionid = ($_POST["sessionid"]);
         $id = "QT". (time() % 10000000);
     $sql_table = "StudentAttendance";
     $query = "INSERT INTO $sql_table(AttendanceId, StudentID, SessionID) VALUES ('$id','$studentid', '$sessionid')";
