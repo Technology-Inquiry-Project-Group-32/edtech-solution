@@ -17,7 +17,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>Studente Session</title>
 
     <meta name="description" content="" />
 
@@ -268,6 +268,7 @@
                 </div>
                 <form method="post" action="checkattendance.php">
                     <input type ="text" placeholder="Enter your student ID" id="studentid" name="studentid">
+                    <input type="hidden" name="sessionid" id="sessionid">
                     <input type="submit" value="Click To Check Attendance" class="button" id="checkattendance">
                 </form>
                 <div class="col-md-6">
@@ -275,7 +276,7 @@
                       <h5 class="card-header">Question Form</h5>
                       <div class="card-body">
                         <div class="mb-3">
-                            <form method="post" action="../">
+                            <form method="post" action="sendquestion.php">
                                 <fieldset>
                                 <p><label for="subject" class="card-title text-primary">Select Subject: </label>
                                     <select name="subject" id="subject" required="required">
@@ -288,6 +289,7 @@
                                 <p><label for="inputquestion" class="card-title text-primary">Please Input Quesion</label></p>
                                     <textarea id="inputquestion" name="inputquestion" placeholder="Please type your question here" rows="4" cols="40"></textarea><br>      
                                 </fieldset>
+                                <input type="hidden" name="sessionid" id="sessionid">
                                 <input type="submit" value="Click To Send Question" class="button" id="sendquestion">
                             </form>
                         </div>
