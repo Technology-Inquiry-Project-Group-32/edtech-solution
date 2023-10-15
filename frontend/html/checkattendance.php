@@ -36,7 +36,7 @@
     }
     else{
         echo "<script>
-        var popupMessage = 'Check Attendance Successul';
+        var popupMessage = 'Check Attendance Successful';
         var confirmButtonText = 'Back To Student Page';
         var result = confirm(popupMessage);
         if (result) {
