@@ -45,7 +45,7 @@ function get($id = null)
     }else{
         $selectQuery = "select * from Question where QuestionID = '$id'";
     }
-    $schema = array("QuestionId", "Question", "SubjectAreaID", "SessionID", "StudentId");
+    $schema = array("QuestionID", "Question", "SubjectAreaID", "SessionID", "StudentID");
     $result = executeSelectQuery($selectQuery,$schema);
     return $result;
 }

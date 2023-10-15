@@ -46,7 +46,7 @@ function get($id = null)
     }else{
         $selectQuery = "select * from Session where SessionID = '$id'";
     }
-    $schema = array("SessionID", "Date", "DayOfWeek","StartTime","EndTime");
+    $schema = array("SessionID", "Date", "DayOfWeek");
     $result = executeSelectQuery($selectQuery,$schema);
     return $result;
 }

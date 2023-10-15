@@ -6,15 +6,17 @@ async function init() {
             password: $("#password").val(),
         }
         let response = await doPost("../../backend/login/index.php",reqBody)
-        if(!!response["StudentID"]){
+        if(response && !!response["StudentID"]){
             sessionStorage["UserType"] = 'Student';
             sessionStorage["ID"] = response["StudentID"];
             location.replace("student-profile.html");
+            return;
         }
-        if(!!response["TutorID"]){
+        if(response && !!response["TutorID"]){
             sessionStorage["UserType"] = 'Tutor';
             sessionStorage["ID"] = response["TutorID"];
             location.replace("tutor-profile.html");
+            return;
         }
         alert("invalid credential");
     })

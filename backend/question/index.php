@@ -6,7 +6,7 @@ header('Content-Type: application/json; charset=utf-8');
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     // handle GET request
-    $results = getAnswers();
+    $results = getQuestion();
     echo json_encode($results);
     return true;
 } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
