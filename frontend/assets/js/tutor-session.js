@@ -27,23 +27,11 @@ async function getQuestions() {
             return;
         }
         let tutor = tutorInfo[0];
-        var urlParams = new URLSearchParams(window.location.search);
-        if (!urlParams.has('sessionID')) {
-            alert("invalid session id");
-            location.replace('tutor-profile.html');
-            return;
-        }
+        const urlParams = new URLSearchParams(window.location.search);
         let sessionID = urlParams.get("sessionID")
-        let sessions = await doGet("../../backend/session/index.php", {id: sessionID});
-        if (!sessions || sessions.length === 0) {
-            alert("invalid session id");
-            location.replace('tutor-info.html');
-            return;
-        }
-        let session = sessions[0];
         $('#session-name').text(sessionID)
         let questions = await doGet("../../backend/question/session.php", {id: sessionID});
-
+        questions.sort((q1,q2) => q1.QuestionID > q2.QuestionID ? -1 : 1)
         $("#tutor-name").text(tutor.Firstname);
         if (questions && questions.length > 0) {
             $("#question-list").html(questions.map(value => `<a
@@ -73,6 +61,11 @@ async function getQuestions() {
                 $(`#answered-time-${questionID}`).show();
                 $(`#answered-time-${questionID}`).text("Time to answer: "+ Math.ceil(parseInt(answers[i].TimeTakenToAnswer) / 1000) + "s");
                 $(`#start-answer-btn-${questionID}`).hide();
+                $(`#stop-answer-btn-${questionID}`).hide();
+            }else{
+                $(`#answered-${questionID}`).hide();
+                $(`#answered-time-${questionID}`).hide();
+                $(`#start-answer-btn-${questionID}`).show();
                 $(`#stop-answer-btn-${questionID}`).hide();
             }
         }

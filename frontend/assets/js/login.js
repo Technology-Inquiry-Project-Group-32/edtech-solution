@@ -9,7 +9,7 @@ async function init() {
         if(response && !!response["StudentID"]){
             sessionStorage["UserType"] = 'Student';
             sessionStorage["ID"] = response["StudentID"];
-            location.replace("student-profile.html");
+            location.replace("sessionpage.html");
             return;
         }
         if(response && !!response["TutorID"]){

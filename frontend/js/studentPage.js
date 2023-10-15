@@ -25,6 +25,8 @@ function init(){
     document.getElementById("sessionContent").textContent = selectedSubject;
     document.getElementById("sessionid").value = selectedSubject;
     document.getElementById("sessionid1").value = selectedSubject;
+    document.getElementById("student-greeting").innerText = "Hello " + sessionStorage["ID"];
+    document.getElementById("studentid").value = sessionStorage["ID"];
 }
 
 
