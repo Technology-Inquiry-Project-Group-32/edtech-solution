@@ -35,7 +35,14 @@
             echo "<p class=\"wrong\"> Something is wrong with", $query, "</p>"; 
     }
     else{
-        echo "<p class=\"ok\"> Check Attendance Successfull </p>";
+        echo "<script>
+        var popupMessage = 'Check Attendance Successul';
+        var confirmButtonText = 'Back To Student Page';
+        var result = confirm(popupMessage);
+        if (result) {
+            window.location.href = 'studentsession.html';
+        }
+        </script>";
     }
 
     //close the connection
