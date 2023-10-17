@@ -18,7 +18,7 @@ function init(){
     checkattendance.onclick = checkAttendance;
     if (sessionStorage.attendanceChecked == "true"){
         checkattendance.disabled = true;
-        checkattendance.value = "Already checked";
+        checkattendance.innerText = "Already checked";
     }    
     
     var selectedSubject = sessionStorage.getItem("selectedSubject");
