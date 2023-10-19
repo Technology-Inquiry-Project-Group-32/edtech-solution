@@ -82,8 +82,9 @@ function getQuestionPerSessionStats()
 {
     $sql_query = "
     SELECT q.SessionID, s.Subject, COUNT(q.QuestionID) AS num_questions
-    FROM Question q
-    JOIN SubjectArea s ON q.SubjectAreaID = s.SubjectAreaID
+    FROM Question q, SubjectArea s, Answer a 
+    WHERE q.SubjectAreaID = s.SubjectAreaID
+        AND a.QuestionID = q.QuestionID
     GROUP BY q.SessionID, s.Subject
     ORDER BY q.SessionID DESC;
 ";
