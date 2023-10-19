@@ -60,3 +60,34 @@ function getBySession($id = null)
     $result = executeSelectQuery($selectQuery,$schema);
     return $result;
 }
+function getQuestionStats()
+{
+    $sql_query = "
+    SELECT 
+    Question.QuestionID, 
+    Question.Question, 
+    Answer.TutorID, 
+    Tutor.FirstName, 
+    Answer.TimeTakenToAnswer
+FROM Question
+JOIN Answer ON Question.QuestionID = Answer.QuestionID
+JOIN Tutor ON Answer.TutorID = Tutor.TutorID
+    ORDER BY QuestionID DESC;
+";
+
+    $schema = array("QuestionID", "Question","TutorID", "FirstName", "TimeTakenToAnswer");
+    return executeSelectQuery($sql_query,$schema);
+}
+function getQuestionPerSessionStats()
+{
+    $sql_query = "
+    SELECT q.SessionID, s.Subject, COUNT(q.QuestionID) AS num_questions
+    FROM Question q
+    JOIN SubjectArea s ON q.SubjectAreaID = s.SubjectAreaID
+    GROUP BY q.SessionID, s.Subject
+    ORDER BY q.SessionID DESC;
+";
+
+    $schema = array("SessionID", "num_questions","Subject");
+    return executeSelectQuery($sql_query,$schema);
+}
