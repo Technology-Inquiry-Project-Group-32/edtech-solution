@@ -303,14 +303,14 @@
               color: headingColor,
               fontSize: '15px',
               fontWeight: '600',
-              fontFamily: 'Public Sans'
+              fontFamily: 'DM Sans'
             },
             value: {
               offsetY: -25,
               color: headingColor,
               fontSize: '22px',
               fontWeight: '500',
-              fontFamily: 'Public Sans'
+              fontFamily: 'DM Sans'
             }
           }
         }
@@ -427,7 +427,7 @@
         width: 130,
         type: 'donut'
       },
-      labels: ['Electronic', 'Sports', 'Decor', 'Fashion'],
+      labels: ['Mathematics', 'Biology', 'Chemistry', 'Physics'],
       series: [85, 15, 50, 50],
       colors: [config.colors.primary, config.colors.secondary, config.colors.info, config.colors.success],
       stroke: {
@@ -458,7 +458,7 @@
               show: true,
               value: {
                 fontSize: '1.5rem',
-                fontFamily: 'Public Sans',
+                fontFamily: 'DM Sans',
                 color: headingColor,
                 offsetY: -15,
                 formatter: function (val) {
@@ -467,13 +467,13 @@
               },
               name: {
                 offsetY: 20,
-                fontFamily: 'Public Sans'
+                fontFamily: 'DM Sans'
               },
               total: {
                 show: true,
                 fontSize: '0.8125rem',
                 color: axisColor,
-                label: 'Weekly',
+                label: 'Monthly',
                 formatter: function (w) {
                   return '38%';
                 }
