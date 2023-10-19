@@ -58,3 +58,27 @@ function getByUsername($username="", $password="")
     $result = executeSelectQuery($selectQuery,$schema);
     return $result;
 }
+function getQuestionByTutors($id)
+{
+
+    $selectQuery = "select count(*) numQuestions from Question";
+    $schema = array("numQuestions");
+    $result = executeSelectQuery($selectQuery,$schema);
+    return $result;
+}
+function getNumQuestionByTutors($id)
+{
+
+    $selectQuery = "select count(*) numQuestions from Question";
+    $schema = array("numQuestions");
+    $result = executeSelectQuery($selectQuery,$schema);
+    return $result;
+}
+function getNumAnswersByTutors($id)
+{
+
+    $selectQuery = "select count(*) numAnswers from Answer where TutorID = '$id'";
+    $schema = array("numAnswers");
+    $result = executeSelectQuery($selectQuery,$schema);
+    return $result;
+}

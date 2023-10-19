@@ -15,15 +15,17 @@ function getSessionToday() {
 
 async function getTutorInfo() {
     if (sessionStorage["UserType"] === "Tutor") {
-        let tutorInfo = await doGet("../../backend/tutor/index.php",{id: sessionStorage["ID"]});
-        if(!tutorInfo || tutorInfo.length === 0){
+        let tutorInfo = await doGet("../../backend/tutor/index.php", {id: sessionStorage["ID"]});
+        if (!tutorInfo || tutorInfo.length === 0) {
             alert('Please login')
             location.replace('login.html');
             return;
         }
         let sessions = await doGet("../../backend/session/index.php");
-        sessions.push(getSessionToday())
-        sessions.sort((a,b) => a.Date > b.Date ? 1 : -1);
+        let sessionToday = getSessionToday()
+        sessions = sessions.filter(x => x.SessionID !== sessionToday.SessionID);
+        sessions.push(sessionToday);
+        sessions.sort((a, b) => a.Date > b.Date ? 1 : -1);
         sessions = sessions.map(s => {
             return {
                 ...s,
@@ -33,6 +35,11 @@ async function getTutorInfo() {
         let tutor = tutorInfo[0];
         $("#tutor-name").text(tutor.Firstname);
         $("#greeting").text(`Hello ${tutor.Firstname}!`);
+        //Get numQuestions
+        let numQuestions = await doGet("../../backend/tutor/question.php?id=" + tutor.TutorID)
+        let numAnswers = await doGet("../../backend/tutor/answer.php?id=" + tutor.TutorID)
+        $("#numQuestions").text(numQuestions[0].numQuestions);
+        $("#numAnswers").text(numAnswers[0].numAnswers);
         $("#upcoming-sessions-list").html(sessions.map(value => `<li class="d-flex mb-4 pb-1">
                                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                                 <div class="me-2">
@@ -52,6 +59,7 @@ async function getTutorInfo() {
         location.replace('login.html');
     }
 }
+
 $(document).ready(async function () {
     const tutorInfo = await getTutorInfo();
     // getAnswers();
