@@ -58,3 +58,12 @@ function getByUsername($username="", $password="")
     $result = executeSelectQuery($selectQuery,$schema);
     return $result;
 }
+function getStudentPerSession(){
+    $query = "SELECT SessionID, COUNT(DISTINCT StudentID) AS Num_Attending
+                  FROM StudentAttendance
+                  WHERE StudentID <> '' and SessionID <> ''
+                  GROUP BY SessionID ORDER BY SessionID DESC;";
+    $schema = array("SessionID", "Num_Attending");
+    $result = executeSelectQuery($query,$schema);
+    return $result;
+}

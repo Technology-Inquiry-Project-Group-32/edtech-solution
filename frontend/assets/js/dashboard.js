@@ -21,6 +21,15 @@ async function init() {
             </tr></thead>`;
     perSessionTableHTML += ('<tbody>' + (questionPerSessionStats.map(x => `<tr><td scope="row">${x.SessionID}</td><td>${x.Subject}</td><td>${x.num_questions}</td></tr>`).join("\n")) + '</tbody>');
     $("#questionPerSessionTable").html(perSessionTableHTML);
+    let studentsPerSessionStats = await doGet("../../backend/session/student.php");
+    let studentsPerSessionTableHTML = `<table class="table table-striped table-bordered">
+<thead>
+            <tr>
+                <th scope="col">Session ID</th>
+                <th scope="col">Number of Students</th>
+            </tr></thead>`;
+    studentsPerSessionTableHTML += ('<tbody>' + (studentsPerSessionStats.map(x => `<tr><td scope="row">${x.SessionID}</td><td>${x.Num_Attending}</td></tr>`).join("\n")) + '</tbody>');
+    $("#studentsPerSessionTable").html(studentsPerSessionTableHTML);
 }
 $(document).ready(async function () {
     init();
