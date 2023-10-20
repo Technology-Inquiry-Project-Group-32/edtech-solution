@@ -1,145 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="student" content="attendance, question">
-        <meta name="author" content="Cao Tuan Luong">
-        <meta name="keywords" content="html, css, js">
-        <title>Session Page</title>
-        <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+<head>
+    <meta charset="utf-8">
+    <meta name="student" content="attendance, question">
+    <meta name="author" content="Cao Tuan Luong">
+    <meta name="keywords" content="html, css, js">
+    <title>Session Page</title>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
     <title>Session Page</title>
 
-    <meta name="description" content="" />
+    <meta name="description" content=""/>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico"/>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet"
     />
 
     <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css"/>
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="../assets/css/demo.css" />
+    <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css"/>
+    <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css"/>
+    <link rel="stylesheet" href="../assets/css/demo.css"/>
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"/>
 
     <!-- Page CSS -->
 
     <!-- Helpers -->
     <script src="../assets/vendor/js/helpers.js"></script>
-   
+
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../assets/js/config.js"></script>
     <script src="../js/sessionpage.js"></script>
-    </head>
-    <body>
-      <div class="col-sm-7">
-        <div class="card-body">
-          <h5 class="card-title text-primary">Hello Student</h5>
-          <h4>Here is the list of session for today</h4>
-        </div>
-      </div>
-        <div class="card mb-4">
-            <h5 class="card-header">List Session</h5>
-            <div class="card-body">
-              <div class="row">
-                <!-- Custom content with heading -->
-                <div class="col-lg-6 mb-4 mb-xl-0">
-                  <div class="mt-3">
+</head>
+<body>
+<div class="col-sm-7">
+    <div class="card-body">
+        <h5 class="card-title text-primary">Hello Student</h5>
+        <h4>Here is the list of session for today</h4>
+    </div>
+</div>
+<div class="card mb-4">
+    <h5 class="card-header">List Session</h5>
+    <div class="card-body">
+        <div class="row">
+            <!-- Custom content with heading -->
+            <div class="col-lg-6 mb-4 mb-xl-0">
+                <div class="mt-3">
                     <div class="row">
-                      <div class="col-md-4 col-12 mb-3 mb-md-0">
-                        <div class="list-group">
-                          <a
-                            class="list-group-item list-group-item-action active"
-                            id="list-home-list"
-                            data-bs-toggle="list"
-                            href="#list-home"
-                            >Mathematic</a
-                          >
-                          <a
-                            class="list-group-item list-group-item-action"
-                            id="list-profile-list"
-                            data-bs-toggle="list"
-                            href="#list-profile"
-                            >Chemistry</a
-                          >
-                          <a
-                            class="list-group-item list-group-item-action"
-                            id="list-messages-list"
-                            data-bs-toggle="list"
-                            href="#list-messages"
-                            >Physics</a
-                          >
-                          <a
-                            class="list-group-item list-group-item-action"
-                            id="list-settings-list"
-                            data-bs-toggle="list"
-                            href="#list-settings"
-                            >Biology</a
-                          >
+                        <div class="col-md-4 col-12 mb-3 mb-md-0">
+                            <div class="list-group">
+                                <a
+                                        class="list-group-item list-group-item-action active"
+                                        id="list-home-list"
+                                        data-bs-toggle="list"
+                                        href="#list-home"
+                                >Mathematic</a
+                                >
+                                <a
+                                        class="list-group-item list-group-item-action"
+                                        id="list-profile-list"
+                                        data-bs-toggle="list"
+                                        href="#list-profile"
+                                >Chemistry</a
+                                >
+                                <a
+                                        class="list-group-item list-group-item-action"
+                                        id="list-messages-list"
+                                        data-bs-toggle="list"
+                                        href="#list-messages"
+                                >Physics</a
+                                >
+                                <a
+                                        class="list-group-item list-group-item-action"
+                                        id="list-settings-list"
+                                        data-bs-toggle="list"
+                                        href="#list-settings"
+                                >Biology</a
+                                >
+                            </div>
                         </div>
-                      </div>
-                      <div class="col-md-8 col-12">
-                        <div class="tab-content p-0">
-                          <div class="tab-pane fade show active" id="list-home">
-                            The class is taken care by Doctor Terrence Tao, and this session is dedicated to advanced calculus. Please enter 
-                            session before 15:00 p.m. This session will last for 02 hours.
-                          </div>
-                          <div class="tab-pane fade" id="list-profile">
-                           Madame Curie will be the tutor of this session. This session will help student understanding the basic foundation
-                           of positiive and negative ions and how it combine together to become new material. This session will last for 90 minutes
-                          </div>
-                          <div class="tab-pane fade" id="list-messages">
-                           This session will be taught by Dr Max Well. In this session, students will have a chance to review and solve exercise related to
-                           electromagnetic radiation. Moreover, if the students have any questions related to general relativity theory, Dr Max Well is more 
-                           than happy to explain it in the most easiest way.
-                          </div>
-                          <div class="tab-pane fade" id="list-settings">
-                           This sessiong will be taught by Dr. Charles Darwin. In this session, students will be able to review the evolutionary biology.
-                           Besides, exercises about genetics and DNA will be reviewed closely as this is important for student who attend the Olympic in chemistry.
-                          </div>
+                        <div class="col-md-8 col-12">
+                            <div class="tab-content p-0">
+                                <div class="tab-pane fade show active" id="list-home">
+                                    The class is taken care by Doctor Terrence Tao, and this session is dedicated to
+                                    advanced calculus. Please enter
+                                    session before 15:00 p.m. This session will last for 02 hours.
+                                </div>
+                                <div class="tab-pane fade" id="list-profile">
+                                    Madame Curie will be the tutor of this session. This session will help student
+                                    understanding the basic foundation
+                                    of positiive and negative ions and how it combine together to become new material.
+                                    This session will last for 90 minutes
+                                </div>
+                                <div class="tab-pane fade" id="list-messages">
+                                    This session will be taught by Dr Max Well. In this session, students will have a
+                                    chance to review and solve exercise related to
+                                    electromagnetic radiation. Moreover, if the students have any questions related to
+                                    general relativity theory, Dr Max Well is more
+                                    than happy to explain it in the most easiest way.
+                                </div>
+                                <div class="tab-pane fade" id="list-settings">
+                                    This sessiong will be taught by Dr. Charles Darwin. In this session, students will
+                                    be able to review the evolutionary biology.
+                                    Besides, exercises about genetics and DNA will be reviewed closely as this is
+                                    important for student who attend the Olympic in chemistry.
+                                </div>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
-                <h5> Please choose a session first and then enter the session</h5> 
-                <a href="studentsession.html"><button type="button" class="btn btn-primary" id="enterSessionButton">Enter Session</button></a>  
                 </div>
-                
-                <!--/ Custom content with heading -->
-              </div>
+                <h5> Please choose a session first and then enter the session</h5>
+                <a href="studentsession.html">
+                    <button type="button" class="btn btn-primary" id="enterSessionButton">Enter Session</button>
+                </a>
             </div>
-          </div>
-          <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-          <script src="../assets/vendor/libs/popper/popper.js"></script>
-          <script src="../assets/vendor/js/bootstrap.js"></script>
-          <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-      
-          <script src="../assets/vendor/js/menu.js"></script>
-          <!-- endbuild -->
-      
-          <!-- Vendors JS -->
-      
-          <!-- Main JS -->
-          <script src="../assets/js/main.js"></script>
-         
-          <!-- Page JS -->
-      
-          <!-- Place this tag in your head or just before your close body tag. -->
-          <script async defer src="https://buttons.github.io/buttons.js"></script>
-    </body>
+
+            <!--/ Custom content with heading -->
+        </div>
+    </div>
+</div>
+<div class="card mb-4">
+    <h5 class="card-header">Register Form</h5>
+    <div class="card-body">
+        <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php" class="application-form"
+              id="application-form">
+            <div class="form-group">
+                <!-- First Name -->
+                <label for="fname">First Name:</label>
+                <input type="text" class="form-control" id="fname" name="fname" required=""><br>
+
+                <!-- Last Name -->
+                <label for="lname">Last Name:</label>
+                <input type="text"  class="form-control" id="lname" name="lname" required=""><br>
+
+                <!-- Email -->
+                <label for="email">Email Address:</label>
+                <input type="email"  class="form-control" id="email" name="email" required=""><br>
+
+                <!--Phone Number-->
+                <label for="phone_number">Mobile Number:</label>
+                <input type="tel"  class="form-control" name="phone_number" id="phone_number" pattern="[0-9]{8,10}" required="required"><br>
+
+                <!-- Grade Level -->
+                <label for="grade_level">Grade Level:</label>
+                <select id="grade_level"  class="form-control" name="grade_level" required="">
+                    <option value="">Select</option>
+                    <option value="9">9th Grade</option>
+                    <option value="10">10th Grade</option>
+                    <option value="11">11th Grade</option>
+                    <option value="12">12th Grade</option>
+                </select><br>
+
+                <!-- Date -->
+                <label for="classsdate">Date:</label>
+                <input type="date"  class="form-control" name="classsdate" id="classsdate" pattern="\d{1,2}\/\d{1,2}\/\d{4}"
+                       placeholder="dd/mm/yyyy" required="required">
+                <br>
+                <div class="form-group" id="extra_class">
+                    <legend>Subjects:</legend>
+                    <label for="physics"><input type="checkbox" class="form-check-input"  name="subject[]" id="physics" value="physics" checked="">
+                        Physics</label>
+                    <label for="chemistry"><input type="checkbox" class="form-check-input"  name="subject[]" id="chemistry" value="chemistry">
+                        Chemistry</label>
+                    <label for="math"><input type="checkbox" class="form-check-input"  name="subject[]" id="math" value="math">
+                        Mathematics</label>
+                    <label for="literature"><input type="checkbox" class="form-check-input"  name="subject[]" id="literature" value="literature">
+                        Literature</label>
+                    <label for="bio"><input type="checkbox" class="form-check-input"  name="subject[]" id="bio" value="bio">
+                        Biology</label>
+                </div>
+                <br>
+
+                <fieldset id="class_day">
+                    <legend>Day:</legend>
+                    <label for="mon"><input  class="form-check-input" type="checkbox" name="day[]" id="mon" value="mon" checked="">
+                        Monday</label>
+                    <label for="tue"><input type="checkbox" name="day[]"  class="form-check-input" id="tue" value="tue">
+                        Tuesday</label>
+                    <label for="wed"><input type="checkbox" name="day[]" id="wed"  class="form-check-input" value="wed">
+                        Wednesday</label>
+                    <label for="thur"><input type="checkbox" name="day[]" id="thur"  class="form-check-input" value="thur">
+                        Thursday</label>
+                    <label for="fri"><input type="checkbox" name="day[]" id="fri"  class="form-check-input" value="fri">
+                        Friday</label>
+                </fieldset>
+                <br>
+
+                <button class="btn-primary btn" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="../assets/vendor/libs/jquery/jquery.js"></script>
+<script src="../assets/vendor/libs/popper/popper.js"></script>
+<script src="../assets/vendor/js/bootstrap.js"></script>
+<script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+<script src="../assets/vendor/js/menu.js"></script>
+<!-- endbuild -->
+
+<!-- Vendors JS -->
+
+<!-- Main JS -->
+<script src="../assets/js/main.js"></script>
+
+<!-- Page JS -->
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+</html>
