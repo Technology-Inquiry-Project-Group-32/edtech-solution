@@ -3,12 +3,13 @@
 
 
 function checkAttendance(){ 
-    var checkattendance = document.getElementById("checkattendance");     
-    if (sessionStorage.attendanceChecked === "true") {
+    var checkattendance = document.getElementById("checkattendance");
+    let id = sessionStorage["ID"]
+    if (sessionStorage["attendanceChecked-"+id] === "true") {
         return;                                                                             // Do nothing if the button is already checked
     }                                                                                       // check attendance of the user  
     checkattendance.innerText= "Already checked";                                                   // Change to already checked
-    sessionStorage.attendanceChecked = "true";               
+    sessionStorage["attendanceChecked-"+id] = "true";
     checkattendance.disable = true;                                 
 }
 
@@ -16,7 +17,8 @@ function checkAttendance(){
 function init(){
     var checkattendance = document.getElementById("checkattendance");
     checkattendance.onclick = checkAttendance;
-    if (sessionStorage.attendanceChecked == "true"){
+    let id = sessionStorage["ID"]
+    if (sessionStorage["attendanceChecked-"+id] === "true"){
         checkattendance.disabled = true;
         checkattendance.innerText = "Already checked";
     }    
